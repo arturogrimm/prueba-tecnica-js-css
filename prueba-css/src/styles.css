@@ -3,5 +3,160 @@ body {
       Ubuntu, "Helvetica Neue", sans-serif;
     height: 100%;
     width: 100%;
-  }
-  
+    background-color: #224785;
+    color: #fff;
+    background-image: url("./assets/bg-triangles.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    padding: 40px 0;
+}
+
+
+
+/* Header Section  */
+.header__title{
+    font-size: 56px;
+    font-weight: 200; 
+    order: 2;
+    width: 100%;
+    margin: 16px 0;
+}
+.header__logo{
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+section.header__wrapper{
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+
+
+/* Content left */
+
+.content__wrapper{
+    max-width: 800px;
+    margin: auto;
+}
+
+h4{
+    color: #4bd0e2;
+    font-size: 24px;
+    margin: 0 0 16px;
+}
+
+
+.content__text{
+    width: 100%;
+}
+.content__description{
+    margin-bottom: 32px;
+}
+
+.content__description ul{
+    list-style: none;
+}
+.content__description li{
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.content__description ul li:before{
+    content: "·";
+    color: #4bd0e2;
+    font-size: 40px;
+    line-height:16px;
+    position: absolute;
+    left: -20px;
+}
+
+
+
+
+/* Table */
+.table-header{
+    background-color: #7eb5dc;
+    color: #fff;
+    padding: 24px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.table-body{
+    display: flex;
+}
+.cell-title{
+    color: #254c8e;
+    font-size: 24px;
+    display: block;
+}
+
+.content__table span{
+    font-size: 24px;
+}
+
+.table-left,
+.table-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 24px;
+    text-align: center;
+}
+.table-left span:not(.cell-title),
+.table-right span:not(.cell-title){
+    font-size: 40px;
+}
+.table-left{
+    background-color: greenyellow;
+}
+.table-right{
+    background-color: deeppink;
+    border-bottom-right-radius: 8px; 
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    section.header__wrapper{
+        flex-direction: row;
+        gap: 0;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    .header__title{
+        font-size: 56px;
+        font-weight: 200;
+        width: calc(80% - 40px);
+        order: 1;
+    }
+    .header__logo{
+        order: 2;
+        width: max(200px, 20%);
+    }
+    
+    section{
+        flex-direction: row;
+        gap: 40px;
+    }
+}

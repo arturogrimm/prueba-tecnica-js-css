@@ -1,26 +1,59 @@
 
 var arrayTest = [1, 2, 3, 3, 2, 1, 4];
 
-document.getElementById("app").innerHTML = `
-  <h1>Unique Element Challenge</h1>
-
-  <h2>Target</h2>
-  <div>Find the unique value in the array that is not duplicated. Use the <b>dubbed</b> function to return the unique element.</div>
-
-  <h2>Considerations</h2>
-  <ul>
-    <li>Values are duplicated only twice.</li>
-    <li>There is only one non duplicate value.</li>
-    <li>The non duplicate value can be placed anywhere on the array.</li>
-    <li>The result must be an integer.</li>
-  </ul>
-  
-  <h2>Test Data</h2>
-  <div>${arrayTest}</div>
-    
-  <h2>Expected result</h2>
-  <div>4</div>
-
-  <h2>Your Result</h2>
-  <div>4</div>
+document.getElementById("app").innerHTML = `  
+  <section class="header__wrapper">
+        <h1 class="header__title">
+            Unique element challenge
+        </h1>
+        <span class="header__logo">
+            <img src="./src/assets/logo.svg" alt="Logo"/>
+        </span>
+    </section>
+    <section class="content__wrapper">
+        <div class="content__text">
+            <h4 class="content__title">
+                Target
+            </h4>
+            <p class="content__description">
+                Find the unique value in the array that is not duplicated. Use the dubbed function to return the unique
+                element
+            </p>
+            <h4 class="content__title">
+                Considerations
+            </h4>
+            <div class="content__description">
+                <ul>
+                    <li>
+                        Values are <b>duplicated only twice</b>
+                    </li>
+                    <li>
+                        There is <b>only one non duplicate value</b>
+                    </li>
+                    <li>
+                        The non duplicate value can be placed <b>anywhere on the array</b>
+                    </li>
+                    <li>
+                        The result must be an <b>integer</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content__table">
+            <div class="table-header">
+                <span class="cell-title">Test Data</span>
+                <span id="test-data">${arrayTest}</span>
+            </div>
+            <div class="table-body">
+                <div class="table-left">
+                    <span class="cell-title">Expected Result</span>
+                    <span id="expected">4</span>
+                </div>
+                <div class="table-right">
+                    <span class="cell-title">Your Result</span>
+                    <span id="result">4</span>
+                </div>
+            </div>
+        </div>
+    </section>
 `;
